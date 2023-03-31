@@ -1,0 +1,91 @@
+nav {
+    margin: 27px auto 20px;
+    position: relative;
+    width: 800px;
+    height: 50px;
+    background-color: #34495e;
+    border-radius: 8px;
+    font-size: 0;
+}
+nav a {
+    line-height: 50px;
+    width: 25%;
+    height: 100%;
+    font-size: 15px;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all .5s ease 0s;
+    border-radius: 8px;
+}
+nav .start-home, a:nth-child(1):hover~.animation {
+    width: 200px;
+    left: 0;
+    background-color: #1abc9c;
+}
+nav .start-top10, a:nth-child(2):hover~.animation {
+    width: 200px;
+    left: 200px;
+    background-color: #e74c3c;
+}
+nav .start-login, a:nth-child(3):hover~.animation {
+    width: 200px;
+    left: 400px;
+    background-color: #3498db;
+}
+nav .start-admin, a:nth-child(4):hover~.animation {
+    width: 200px;
+    left: 600px;
+    background-color: #9b59b6;
+}
+body {
+    margin-top: 20px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+thead {
+    background-color: #b9b9b9;
+}
+.login-info {
+    text-align: center;
+}
+
+@media (max-width: 830px) {
+    nav {
+        width: 100%;
+    }
+    nav a {
+        width: 25%;
+    }
+    nav .start-home, a:nth-child(1):hover~.animation {
+        width: 25%;
+        left: 0;
+        background-color: #1abc9c;
+    }
+    nav .start-top10, a:nth-child(2):hover~.animation {
+        width: 25%;
+        left: 25%;
+        background-color: #e74c3c;
+    }
+    nav .start-login, a:nth-child(3):hover~.animation {
+        width: 25%;
+        left: 50%;
+        background-color: #3498db;
+    }
+    nav .start-admin, a:nth-child(4):hover~.animation {
+        width: 25%;
+        left: 75%;
+        background-color: #9b59b6;
+    }
+}
